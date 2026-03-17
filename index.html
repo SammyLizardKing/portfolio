@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SAM KIM — ARCHITECTURE</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- Simple black cursor dot -->
+  <div class="cursor-dot" id="cursorDot"></div>
+
+  <!-- Noise overlay -->
+  <canvas class="noise" id="noise"></canvas>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox">
+    <button class="lb-close" id="lbClose">×</button>
+    <button class="lb-prev" id="lbPrev">‹</button>
+    <button class="lb-next" id="lbNext">›</button>
+    <div class="lb-img-wrap">
+      <img id="lbImg" src="" alt="" />
+      <div class="lb-caption" id="lbCaption"></div>
+    </div>
+    <div class="lb-counter" id="lbCounter"></div>
+  </div>
+
+  <!-- ===== HEADER ===== -->
+  <header class="receipt-header">
+    <div class="receipt-border-top"></div>
+    <div class="header-inner">
+      <div class="header-meta">
+        <span class="blink">◆</span>&nbsp;PORTFOLIO RECEIPT
+        <span id="headerDate"></span>
+      </div>
+      <h1 class="site-title" id="siteTitle" data-original="SAM KIM">SAM KIM</h1>
+      <p class="site-subtitle">SAM EUNTAEK KIM — SCI-ARC — LOS ANGELES</p>
+      <div class="receipt-divider">- - - - - - - - - - - - - - - - - - - - - - - - - -</div>
+      <nav class="receipt-nav">
+        <a href="#about"       class="nav-link" data-hover="→ ABOUT">ABOUT</a>
+        <span class="nav-sep">·</span>
+        <a href="#projects"    class="nav-link" data-hover="→ ARCHITECTURE">ARCHITECTURE</a>
+        <span class="nav-sep">·</span>
+        <a href="#generative"  class="nav-link" data-hover="→ GENERATIVE">GENERATIVE</a>
+        <span class="nav-sep">·</span>
+        <a href="#contact"     class="nav-link" data-hover="→ CONTACT">CONTACT</a>
+      </nav>
+      <div class="receipt-divider">* * * * * * * * * * * * * * * * * * * * * * * * * *</div>
+    </div>
+  </header>
+
+  <!-- ===== MARQUEE ===== -->
+  <!-- <div class="marquee-wrap">
+    <div class="marquee-track">
+      <span>ARCHITECTURE ·&nbsp;</span><span>PRODUCT DESIGN ·&nbsp;</span>
+      <span>COMPUTATION ·&nbsp;</span><span>AI WORKFLOW ·&nbsp;</span>
+      <span>THEORY ·&nbsp;</span><span>PARAMETRIC ·&nbsp;</span>
+      <span>NARRATIVE ·&nbsp;</span><span>SCI-ARC ·&nbsp;</span>
+      <span>LOS ANGELES ·&nbsp;</span><span>ARCHITECTURE ·&nbsp;</span><span>PRODUCT DESIGN ·&nbsp;</span>
+      <span>COMPUTATION ·&nbsp;</span><span>AI WORKFLOW ·&nbsp;</span>
+      <span>THEORY ·&nbsp;</span><span>PARAMETRIC ·&nbsp;</span>
+      <span>NARRATIVE ·&nbsp;</span><span>SCI-ARC ·&nbsp;</span>
+      <span>LOS ANGELES ·&nbsp;</span>
+    </div>
+  </div> -->
+
+  <!-- ===== ABOUT ===== -->
+  <section id="about" class="section">
+    <div class="section-inner">
+      <div class="receipt-label">§ 01 — ABOUT</div>
+      <div class="receipt-divider">- - - - - - - - - - - - - - - - - - - - - - - - - -</div>
+      <div class="about-grid">
+        <div class="about-left">
+          <div class="profile-img-wrap">
+            <img src="images/about/profile.jpg" alt="Sam Euntaek Kim" class="gallery-img profile-img" />
+            <div class="profile-img-label">PROFILE_PHOTO.JPG</div>
+          </div>
+        </div>
+        <div class="about-right">
+          <p class="about-intro">Sam Euntaek Kim</p>
+          <p class="about-body">I design architecture as a medium for narrative, memory, and encounter — where the overlooked and "in-between" conditions often carry the most meaning. My work moves between storytelling and systems, using computation and AI as tools to question authorship and expand how form can be generated and read. Across projects — from playful worlds built out of fragmented memories to sectional studies of performance spaces — I'm interested in how spatial experience shapes behavior, atmosphere, and social life. I also explore how material and built form can act with agency, producing enchantment not through spectacle, but through emergent interactions.</p>
+          <div class="about-stats">
+            <div class="stat-row"><span class="stat-label">INSTITUTION</span><span class="stat-dots">...........</span><span class="stat-val">SCI-ARC, LOS ANGELES</span></div>
+            <div class="stat-row"><span class="stat-label">EMAIL</span><span class="stat-dots">.................</span><span class="stat-val">SAM_KIM@SCIARC.EDU</span></div>
+            <div class="stat-row"><span class="stat-label">PHONE</span><span class="stat-dots">.................</span><span class="stat-val">(323) 708-1157</span></div>
+            <div class="stat-row"><span class="stat-label">SKILLS</span><span class="stat-dots">................</span><span class="stat-val">AI WORKFLOW· RHINO · GRASSHOPPER · ADOBE SUITE</span></div>
+            <div class="stat-row"><span class="stat-label">ALSO</span><span class="stat-dots">.....................</span><span class="stat-val">AUTOCAD · REVIT · VRAY</span></div>
+            <div class="stat-row"><span class="stat-label">EXPERIENCE</span><span class="stat-dots">.........</span><span class="stat-val">STEINBERG HART</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="receipt-divider">* * * * * * * * * * * * * * * * * * * * * * * * * *</div>
+    </div>
+  </section>
+
+  <!-- ===== PROJECTS ===== -->
+  <section id="projects" class="section">
+    <div class="section-inner">
+      <div class="receipt-label">§ 02 — ARCHITECTURE / PROJECTS</div>
+      <div class="receipt-divider">- - - - - - - - - - - - - - - - - - - - - - - - - -</div>
+
+      <div class="projects-list">
+
+        <!-- ══════════════════════════════════════════
+             01 · OUROBOROS: SCI-ARC EXTENSION
+             ══════════════════════════════════════════ -->
+        <article class="project-item" data-index="01">
+          <div class="project-header" onclick="toggleProject(this)">
+            <div class="project-meta-left">
+              <span class="project-index">[ 01 ]</span>
+              <span class="project-name">OUROBOROS</span>
+            </div>
+            <div class="project-meta-right">
+              <span class="project-type">4A POSITIONS · FA2025</span>
+              <span class="project-toggle">[ + ]</span>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-description">
+              <div class="desc-row"><span class="desc-key">TYPE</span><span class="desc-dots">.............</span><span class="desc-val">INSTITUTIONAL EXTENSION</span></div>
+              <div class="desc-row"><span class="desc-key">SITE</span><span class="desc-dots">...............</span><span class="desc-val">7TH & SANTA FE, LOS ANGELES</span></div>
+              <div class="desc-row"><span class="desc-key">STUDIO</span><span class="desc-dots">............</span><span class="desc-val">4A DESIGN STUDIO: POSITIONS</span></div>
+              <div class="desc-row"><span class="desc-key">INSTRUCTOR</span><span class="desc-dots">.......</span><span class="desc-val">RUSSELL THOMSON</span></div>
+              <div class="desc-row"><span class="desc-key">TOOLS</span><span class="desc-dots">.............</span><span class="desc-val">RHINO · GRASSHOPPER · AI</span></div>
+              <p class="desc-text">My project for an addition to SCI-Arc begins with an observation. The building we occupy now is a quarter mile long linear structure. It produces an excessive amount of circulation along its length, so much that I believe circulation is actually the most important program in the school. The necessity to walk the length of the building, whether it be long or short, enables exchange, visual and verbal. In a sense, circulating along the line promotes multiple forms of interaction and discourse, from the formal to the informal.</p>
+              <p class="desc-text">This proposal works again with a linear form, but instead of simply doubling or paralleling the existing building, it begins to loop back into itself, creating not only a line but a place. Along this loop, segments sometimes separate into autonomous bars, and at other moments they draw together, merging into wider, laminated volumes. As a series of loops they form circuits, minimizing the liability of dead ends.</p>
+              <p class="desc-text desc-quote">"Rather than accepting one definitive ground line, the new bar allows the ground to shift. As it bends, dips, and lifts, the project produces sections where ground is no longer singular: at moments the bar hovers above grade, at others it sinks into it, and sometimes the ground passes through the building as circulation without entering its interior."</p>
+            </div>
+            <div class="project-gallery" data-project="01">
+              <!-- Model photos: 3:2 -->
+                <div class="gallery-pair" style="margin-top:2px">
+                  <img src="images/sciarc-extension/hero.jpg"   alt="Model view 1"  class="gallery-img lb-trigger" loading="lazy" />
+                  <img src="images/sciarc-extension/img2.jpg"   alt="Model view 2"  class="gallery-img lb-trigger" loading="lazy" />
+                </div>
+                <div class="gallery-pair" style="margin-top:2px">
+                  <img src="images/sciarc-extension/model3.jpg" alt="Model view 3"  class="gallery-img lb-trigger" loading="lazy" />
+                  <img src="images/sciarc-extension/model4.jpg" alt="Model view 4"  class="gallery-img lb-trigger" loading="lazy" />
+                </div>
+              
+              <!-- Floor plans -->
+              <div class="gallery-pair" style="margin-top:2px">
+                <img src="images/sciarc-extension/siteplan.jpg"   alt="Site Plan"    class="gallery-img gallery-wide lb-trigger" style="margin-top:2px" loading="lazy" />
+                <img src="images/sciarc-extension/floorplan2.jpg" alt="Floor Plan 2" class="gallery-img lb-trigger" loading="lazy" />
+              </div>
+              <!-- Sections: very wide drawings, full width -->
+              <img src="images/sciarc-extension/section.jpg"  alt="Section A"    class="gallery-img gallery-wide lb-trigger" style="margin-top:2px" loading="lazy" />
+              <img src="images/sciarc-extension/sectionB.jpg" alt="Section B"    class="gallery-img gallery-wide lb-trigger" style="margin-top:2px" loading="lazy" />
+              <!-- Elevation: 6:1 full width -->
+              <img src="images/sciarc-extension/elevation 2.jpg" alt="Elevation A–G" class="gallery-img gallery-wide lb-trigger" style="margin-top:2px" loading="lazy" />
+              <!-- Diagram -->
+              <img src="images/sciarc-extension/diagram.jpg"  alt="Section Diagram" class="gallery-img gallery-wide lb-trigger" style="margin-top:2px" loading="lazy" />
+            </div>
+          </div>
+        </article>
+
+        <!-- ══════════════════════════════════════════
+             02 · NEW MARIINSKY
+             ══════════════════════════════════════════ -->
+        <article class="project-item" data-index="02">
+          <div class="project-header" onclick="toggleProject(this)">
+            <div class="project-meta-left">
+              <span class="project-index">[ 02 ]</span>
+              <span class="project-name">NEW MARIINSKY</span>
+            </div>
+            <div class="project-meta-right">
+              <span class="project-type">3B ASSEMBLIES II · SP2025</span>
+              <span class="project-toggle">[ + ]</span>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-description">
+              <div class="desc-row"><span class="desc-key">TYPE</span><span class="desc-dots">.............</span><span class="desc-val">PERFORMING ARTS CENTER</span></div>
+              <div class="desc-row"><span class="desc-key">SITE</span><span class="desc-dots">...............</span><span class="desc-val">ST. PETERSBURG, RUSSIA</span></div>
+              <div class="desc-row"><span class="desc-key">STUDIO</span><span class="desc-dots">............</span><span class="desc-val">3B DESIGN STUDIO: ASSEMBLIES II</span></div>
+              <div class="desc-row"><span class="desc-key">INSTRUCTOR</span><span class="desc-dots">.......</span><span class="desc-val">ERIC OWEN MOSS</span></div>
+              <div class="desc-row"><span class="desc-key">CONCEPT</span><span class="desc-dots">.......... </span><span class="desc-val">DEFORMATION / COLLISION</span></div>
+              <p class="desc-text">Envisioning the extension as a punch — a forceful collision — one might expect the deformation of the New Mariinsky to be unpredictable and chaotic, like a box absorbing an impact. To mediate this chaos and introduce architectural coherence, I developed a folding technique. The posture of the new building emerges from a diagram generated by this fold: a grid is applied to a folded sheet of paper, and upon unfolding, the distortions of the grid yield a diagram of deformation. This serves as both a record of impact and a generative tool — translating the violence of collision into a spatial language of articulated folds.</p>
+              <p class="desc-text">The proscenium of the Old Mariinsky extends across the canal, transforming into a bridge that connects to the new site. The bridge culminates in a deliberate "punch" into the New Mariinsky — the result of an assemblage of agents, the historical and the contemporary Mariinsky, converging through a shared architectural and performative interface.</p>
+              <p class="desc-text desc-quote">Influenced by Jane Bennett's concept of material vitality, the architecture is understood as responsive rather than passive — engaged in a dynamic interaction between two entities, each with agency.</p>
+            </div>
+            <div class="project-gallery" data-project="03">
+            <img src="images/new-mariinsky/section.jpg" alt="Section Plan" class="gallery-img gallery-wide lb-trigger" style="margin-top:2px" loading="lazy" />
+            <div class="gallery-pair" style="margin-top:2px">
+              <img src="images/new-mariinsky/model.jpg"   alt="Physical Model — South Facade" class="gallery-img lb-trigger" loading="lazy" />
+              <img src="images/new-mariinsky/model2.jpg"  alt="Physical Model — North Facade" class="gallery-img lb-trigger" loading="lazy" />
+            </div>
+            <div class="gallery-pair" style="margin-top:2px">
+              <img src="images/new-mariinsky/steps.jpg"     alt="Design Sequence"  class="gallery-img lb-trigger" loading="lazy" />
+              <img src="images/new-mariinsky/diagram.jpg"     alt="Deformation Diagram" class="gallery-img lb-trigger" loading="lazy" />
+            </div>
+            <div class="gallery-pair" style="margin-top:2px">
+              <img src="images/new-mariinsky/circulation.jpg" alt="Circulation Diagram" class="gallery-img lb-trigger" loading="lazy" />
+              <img src="images/new-mariinsky/floorplan.jpg" alt="Floor Plan"       class="gallery-img lb-trigger" loading="lazy" />
+            </div>
+            
+            
+
+            </div>
+          </div>
+        </article>
+
+        <!-- ══════════════════════════════════════════
+             03 · LA APARTMENT COMPLEX
+             ══════════════════════════════════════════ -->
+        <article class="project-item" data-index="03">
+          <div class="project-header" onclick="toggleProject(this)">
+            <div class="project-meta-left">
+              <span class="project-index">[ 03 ]</span>
+              <span class="project-name">LA APARTMENT</span>
+            </div>
+            <div class="project-meta-right">
+              <span class="project-type">3A ASSEMBLIES I · FA2024</span>
+              <span class="project-toggle">[ + ]</span>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-description">
+              <div class="desc-row"><span class="desc-key">TYPE</span><span class="desc-dots">.............</span><span class="desc-val">RESIDENTIAL + COMMERCIAL</span></div>
+              <div class="desc-row"><span class="desc-key">SITE</span><span class="desc-dots">...............</span><span class="desc-val">HIGHLAND PARK, LOS ANGELES</span></div>
+              <div class="desc-row"><span class="desc-key">STUDIO</span><span class="desc-dots">............</span><span class="desc-val">3A DESIGN STUDIO: ASSEMBLIES I</span></div>
+              <div class="desc-row"><span class="desc-key">INSTRUCTOR</span><span class="desc-dots">.......</span><span class="desc-val">DAVID FREELAND</span></div>
+              <div class="desc-row"><span class="desc-key">TOOLS</span><span class="desc-dots">.............</span><span class="desc-val">RHINO · AUTOCAD · GRASSHOPPER</span></div>
+              <p class="desc-text">Plaid is a pattern created by overlaying two or more grids with consistent intervals. We adapted this concept to divide our site evenly into five parcels — not by depicting an image of plaid but by embracing its generative process. By superimposing two grids derived from the surrounding urban fabric, we forged connections between different urban contexts while directly engaging with the field conditions.</p>
+              <p class="desc-text">Massing was generated through an algorithm that autonomously aggregated blocks. Influenced by parametricism, this process removed direct control, avoiding arbitrary placements while embracing computational logic. The parcel lines stem from overlapping tilted grids, while the massing inclines sequentially from an orthodox grid. Each element aligns with the previous one, gradually deforming the system while maintaining a 50/50 balance of solid and void.</p>
+              <p class="desc-text desc-quote">The elevation features a striking composition of metallic panels juxtaposed with matte finishes, creating a dynamic contrast that accentuates the geometric volumes — establishing an alternative expression of solid and void.</p>
+            </div>
+            <div class="project-gallery" data-project="03">
+              <!-- North elevation render: full width hero -->
+              <img src="images/la-apartment/elevation2.jpg"     alt="North Elevation" class="gallery-img gallery-wide lb-trigger" loading="lazy" />
+              <!-- Diagrams: parcel + aggregation + massing -->
+              <div class="gallery-pair" style="margin-top:2px">
+                <img src="images/la-apartment/parcel.jpg"      alt="Parcel Lines"   class="gallery-img lb-trigger" loading="lazy" />
+                <img src="images/la-apartment/aggregation.png" alt="Aggregation"    class="gallery-img lb-trigger" loading="lazy" />
+              </div>
+              
+              <!-- Model photos -->
+              <div class="gallery-pair" style="margin-top:2px">
+                <img src="images/la-apartment/render1.jpg"   alt="Physical Model 1" class="gallery-img lb-trigger" loading="lazy" />
+                <img src="images/la-apartment/render2.jpg" alt="Physical Model 2" class="gallery-img lb-trigger" loading="lazy" />
+              </div>
+              <div class="gallery-pair" style="margin-top:2px">
+                <img src="images/la-apartment/mp2.jpg"   alt="Physical Model 1" class="gallery-img lb-trigger" loading="lazy" />
+                <img src="images/la-apartment/mp1.jpg" alt="Physical Model 2" class="gallery-img lb-trigger" loading="lazy" />
+              </div>
+              <!-- Axonometrics: 1:1 each -->
+              <div class="gallery-pair" style="margin-top:2px">
+                <img src="images/la-apartment/axon.jpg"  alt="Axonometric 1" class="gallery-img lb-trigger" loading="lazy" />
+                <img src="images/la-apartment/axon2.jpg" alt="Axonometric 2" class="gallery-img lb-trigger" loading="lazy" />
+              </div>
+              <!-- Floor plans: portrait, pair -->
+              <div class="gallery-pair" style="margin-top:2px">
+                <img src="images/la-apartment/floorplan.jpg"  alt="Floor Plan 1" class="gallery-img lb-trigger" loading="lazy" />
+                <img src="images/la-apartment/floorplan2.jpg" alt="Floor Plan 2" class="gallery-img lb-trigger" loading="lazy" />
+              </div>
+              <!-- Sections: wide, full width -->
+              <img src="images/la-apartment/section.jpg"  alt="Section A" class="gallery-img gallery-wide lb-trigger" style="margin-top:2px" loading="lazy" />
+              <img src="images/la-apartment/section2.jpg" alt="Section B" class="gallery-img gallery-wide lb-trigger" style="margin-top:2px" loading="lazy" />
+              <!-- Elevation 3:2 full width -->
+              <img src="images/la-apartment/elevation.jpg"  alt="Elevation" class="gallery-img gallery-wide lb-trigger" style="margin-top:2px" loading="lazy" />
+            </div>
+          </div>
+        </article>
+
+        <!-- ══════════════════════════════════════════
+             04 · 92ND ST ELEMENTARY + ORDINARY DIORAMA
+             ══════════════════════════════════════════ -->
+        <article class="project-item" data-index="04">
+          <div class="project-header" onclick="toggleProject(this)">
+            <div class="project-meta-left">
+              <span class="project-index">[ 04 ]</span>
+              <span class="project-name">92ND ST SCHOOL</span>
+            </div>
+            <div class="project-meta-right">
+              <span class="project-type">2A WORLDS I · FA2020</span>
+              <span class="project-toggle">[ + ]</span>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-description">
+              <div class="desc-row"><span class="desc-key">TYPE</span><span class="desc-dots">.............</span><span class="desc-val">ELEMENTARY SCHOOL</span></div>
+              <div class="desc-row"><span class="desc-key">STUDIO</span><span class="desc-dots">............</span><span class="desc-val">2A: ARCHITECTURE OF EDUCATION</span></div>
+              <div class="desc-row"><span class="desc-key">INSTRUCTOR</span><span class="desc-dots">.......</span><span class="desc-val">KAREL KLEIN</span></div>
+              <div class="desc-row"><span class="desc-key">PARTNER</span><span class="desc-dots">.......... </span><span class="desc-val">MATTHEW SCHOLTZ</span></div>
+              <div class="desc-row"><span class="desc-key">CONCEPT</span><span class="desc-dots">.......... </span><span class="desc-val">UNFORGETTING MEMORIES</span></div>
+              <p class="desc-text">Memories are like scattered puzzle pieces, drifting through the labyrinth of our minds. Over time, they blur, fragment, and fade, shaped by entropy and distortion. Rather than vivid, concrete recollections, they exist in an abstract, elusive form — part reality, part fantasy.</p>
+              <p class="desc-text">The concept of the design is derived from a board game. The goal of the game is to connect grey areas, which implies enchanted space — and by playing the game, students experience exploration through an unknown world. I and Matt attempted to design a school that gives the same experience to the students. Students can explore through this half-real, half-unknown space and reach each classroom.</p>
+              <div class="desc-divider">— ORDINARY DIORAMA: SIDEWAYS STORIES FROM 92ND ST SCHOOL —</div>
+              <p class="desc-text">Ordinary Diorama explores the hidden layers of school life — those unplanned moments and in-between spaces where a different kind of education unfolds. Beyond libraries and playgrounds, these shadowed spaces capture the raw, unscripted experiences of youth. This project challenges the idea that memories endure because of their perfection. Instead, it celebrates their authenticity.</p>
+            </div>
+            <div class="project-gallery" data-project="04">
+              <!-- Main render: full width -->
+              <img src="images/92nd-elementary/hero.jpg"    alt="92nd St Elementary — Main Render" class="gallery-img gallery-wide lb-trigger" loading="lazy" />
+              <!-- Chunk models -->
+              <div class="gallery-pair" style="margin-top:2px">
+                <img src="images/92nd-elementary/chunk1.jpg"  alt="Chunk Model 1 — Enchanted Space" class="gallery-img lb-trigger" loading="lazy" />
+                <img src="images/92nd-elementary/chunk2.jpg"  alt="Chunk Model 2 — Classroom"       class="gallery-img lb-trigger" loading="lazy" />
+              </div>
+              <div class="gallery-pair" style="margin-top:2px">
+                <img src="images/92nd-elementary/chunk3.jpg"  alt="Chunk Model 3 — Library"         class="gallery-img lb-trigger" loading="lazy" />
+                <img src="images/92nd-elementary/board.jpg" alt="Program Diagram"              class="gallery-img lb-trigger" loading="lazy" />
+              </div>
+              <!-- Ordinary Diorama renders -->
+              <div class="gallery-pair" style="margin-top:2px">
+                <img src="images/92nd-elementary/diorama1.jpg" alt="Ordinary Scenes 1: Fight Club"  class="gallery-img lb-trigger" loading="lazy" />
+                <img src="images/92nd-elementary/diorama2.jpg" alt="Ordinary Scenes 2: Library"     class="gallery-img lb-trigger" loading="lazy" />
+              </div>
+              <div class="gallery-pair" style="margin-top:2px">
+                <img src="images/92nd-elementary/diorama3.jpg" alt="Ordinary Scenes 3: Corridor"    class="gallery-img lb-trigger" loading="lazy" />
+                <img src="images/92nd-elementary/diorama4.jpg" alt="Ordinary Scenes 4: Auditorium"  class="gallery-img lb-trigger" loading="lazy" />
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- ══════════════════════════════════════════
+             05 · TERRA-ASSIMILATION
+             ══════════════════════════════════════════ -->
+        <article class="project-item" data-index="05">
+          <div class="project-header" onclick="toggleProject(this)">
+            <div class="project-meta-left">
+              <span class="project-index">[ 05 ]</span>
+              <span class="project-name">TERRA-ASSIMILATION</span>
+            </div>
+            <div class="project-meta-right">
+              <span class="project-type">2B WORLDS II · SP2021</span>
+              <span class="project-toggle">[ + ]</span>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-description">
+              <div class="desc-row"><span class="desc-key">TYPE</span><span class="desc-dots">.............</span><span class="desc-val">FILM STUDIO + FESTIVAL</span></div>
+              <div class="desc-row"><span class="desc-key">SITE</span><span class="desc-dots">...............</span><span class="desc-val">EAGLE MOUNTAIN, CALIFORNIA</span></div>
+              <div class="desc-row"><span class="desc-key">STUDIO</span><span class="desc-dots">............</span><span class="desc-val">2B DESIGN STUDIO: WORLDS II</span></div>
+              <div class="desc-row"><span class="desc-key">INSTRUCTOR</span><span class="desc-dots">.......</span><span class="desc-val">SOOMEEN HAHM</span></div>
+              <div class="desc-row"><span class="desc-key">PARTNER</span><span class="desc-dots">.......... </span><span class="desc-val">NICOLAS BARREDA</span></div>
+              <p class="desc-text">In this project, we were tasked with proposing a specific entity to coexist on the site alongside human inhabitants. Our objective was to explore the harmony and conflicts that would arise between these two entities, ultimately envisioning and portraying new environmental dynamics and typologies for the speculative near future.</p>
+              <p class="desc-text">The structures have been designed to symbolize various stages in an ecological succession, capturing the essence of both biological and geological processes. In order to mimic the unpredictability of these processes, we used a variety of modeling techniques that incorporated a certain degree of chance, giving us different iterations every time the methods were applied.</p>
+              <p class="desc-text desc-quote">"Soon after, it began playing with the inorganic matter of the geological stratum, shifting plates of rocks and minerals, creating a fragmented monolith. Platforms rising and falling, buildings twisting and rearranging positions almost as fluidly and organically as the beds of plants nearby."</p>
+            </div>
+            <div class="project-gallery" data-project="05">
+              <!-- Main render: wide -->
+              <img src="images/terra-assimilation/hero.jpg"      alt="Terra-Assimilation — Film Studio" class="gallery-img gallery-wide lb-trigger" loading="lazy" />
+              <!-- Exterior views -->
+              <div class="gallery-pair" style="margin-top:2px">
+                <img src="images/terra-assimilation/exterior1.jpg" alt="Exterior View 1"  class="gallery-img lb-trigger" loading="lazy" />
+                <img src="images/terra-assimilation/exterior2.jpg" alt="Exterior View 2"  class="gallery-img lb-trigger" loading="lazy" />
+              </div>
+              <!-- Interior views -->
+              <div class="gallery-pair" style="margin-top:2px">
+                <img src="images/terra-assimilation/interior1.jpg" alt="Interior — Film Stage 1" class="gallery-img lb-trigger" loading="lazy" />
+                <img src="images/terra-assimilation/interior2.jpg" alt="Interior — Film Stage 2" class="gallery-img lb-trigger" loading="lazy" />
+              </div>
+              <!-- Map + board -->
+              <div class="gallery-pair" style="margin-top:2px">
+                <img src="images/terra-assimilation/map.jpg"       alt="Site Data — Eagle Mountain" class="gallery-img lb-trigger" loading="lazy" />
+                <img src="images/terra-assimilation/siteplan.jpg" alt="Site Plan"        class="gallery-img lb-trigger" loading="lazy" />
+              </div>
+            </div>
+          </div>
+        </article>
+
+      </div><!-- /projects-list -->
+
+      <div class="receipt-divider">- - - - - - - - - - - - - - - - - - - - - - - - - -</div>
+      <div class="projects-footer">
+        <span>TOTAL ITEMS: 05</span>
+        <span class="footer-dots">................................</span>
+        <span>SCI-ARC 2020–2025</span>
+      </div>
+      <div class="receipt-divider">* * * * * * * * * * * * * * * * * * * * * * * * * *</div>
+    </div>
+  </section>
+
+  <!-- ===== GENERATIVE ===== -->
+  <section id="generative" class="section">
+    <div class="section-inner">
+      <div class="receipt-label">§ 03 — GENERATIVE</div>
+      <div class="receipt-divider">- - - - - - - - - - - - - - - - - - - - - - - - - -</div>
+
+      <div class="projects-list">
+
+        <!-- ══════════════════════════════════════════
+             G01 · MACHINE LEARNING
+             ══════════════════════════════════════════ -->
+        <article class="project-item" data-index="G01">
+          <div class="project-header" onclick="toggleProject(this)">
+            <div class="project-meta-left">
+              <span class="project-index">[ G01 ]</span>
+              <span class="project-name">MACHINE LEARNING</span>
+            </div>
+            <div class="project-meta-right">
+              <span class="project-type">ROBOTICS · MACHINE-LEARNING · 2026</span>
+              <span class="project-toggle">[ + ]</span>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-description">
+              <div class="desc-row"><span class="desc-key">TYPE</span><span class="desc-dots">.............</span><span class="desc-val">ROBOT ARM TRAINING VIDEO</span></div>
+              <div class="desc-row"><span class="desc-key">TOOLS</span><span class="desc-dots">.............</span><span class="desc-val">MACHINE-LEARNING · UNITY C#</span></div>
+            </div>
+            <div class="project-gallery" data-project="G01">
+              <video class="gallery-img gallery-wide" controls muted playsinline style="margin-top:2px">
+                <source src="images/generative/Machine Learning/KakaoTalk_20260317_002821826.mp4" type="video/mp4" />
+              </video>
+              <video class="gallery-img gallery-wide" controls muted playsinline style="margin-top:2px">
+                <source src="images/generative/Machine Learning/movie_001.mp4" type="video/mp4" />
+              </video>
+            </div>
+          </div>
+        </article>
+
+        <!-- ══════════════════════════════════════════
+             G02 · PRINTING
+             ══════════════════════════════════════════ -->
+        <article class="project-item" data-index="G02">
+          <div class="project-header" onclick="toggleProject(this)">
+            <div class="project-meta-left">
+              <span class="project-index">[ G02 ]</span>
+              <span class="project-name">PRINTING</span>
+            </div>
+            <div class="project-meta-right">
+              <span class="project-type">PRINT · PLOTTER · 2024</span>
+              <span class="project-toggle">[ + ]</span>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-description">
+              <div class="desc-row"><span class="desc-key">TYPE</span><span class="desc-dots">.............</span><span class="desc-val">PENPLOTTER PRINTING</span></div>
+              <div class="desc-row"><span class="desc-key">TOOLS</span><span class="desc-dots">.............</span><span class="desc-val">GRASSHOPPER</span></div>
+            </div>
+            <div class="project-gallery" data-project="G02">
+              <div class="gallery-pair" style="margin-top:2px">
+                <img src="images/generative/Printing/print 1 red blue black.jpg"   alt="Print 1"        class="gallery-img lb-trigger" loading="lazy" />
+                <img src="images/generative/Printing/print 2 red blue black.jpg"   alt="Print 2"        class="gallery-img lb-trigger" loading="lazy" />
+              </div>
+              <div class="gallery-pair" style="margin-top:2px">
+                <img src="images/generative/Printing/print 1 zoom in.jpg"          alt="Print 1 Detail" class="gallery-img lb-trigger" loading="lazy" />
+                <img src="images/generative/Printing/wave.jpg"                     alt="Wave"           class="gallery-img lb-trigger" loading="lazy" />
+              </div>
+              <div class="gallery-pair" style="margin-top:2px">
+                <img src="images/generative/Printing/cymk.jpg"                     alt="CYMK"           class="gallery-img lb-trigger" loading="lazy" />
+                <img src="images/generative/Printing/print1 progress.jpg"          alt="Print Progress" class="gallery-img lb-trigger" loading="lazy" />
+              </div>
+              <div class="gallery-pair" style="margin-top:2px">
+                <img src="images/generative/Printing/dad portrait.jpg"             alt="Portrait — Dad" class="gallery-img lb-trigger" loading="lazy" />
+                <img src="images/generative/Printing/mom portrait.jpg"             alt="Portrait — Mom" class="gallery-img lb-trigger" loading="lazy" />
+              </div>
+              <div class="gallery-pair" style="margin-top:2px">
+                <img src="images/generative/Printing/Runway_Gemini_3_Pro____json____aesthetic______color_grade___022726.png"             alt="AI Color Grade"    class="gallery-img lb-trigger" loading="lazy" />
+                <img src="images/generative/Printing/Runway_Gemini_3_Pro____reference_images______image_1____Actress_022726.png"        alt="AI Reference"      class="gallery-img lb-trigger" loading="lazy" />
+              </div>
+              <div class="gallery-pair" style="margin-top:2px">
+                <img src="images/generative/Printing/Runway_capture_frames_2c4d3e9c-8d87-4661-a2c4-3aa8636246d0.jpeg"                  alt="AI Capture Frame"  class="gallery-img lb-trigger" loading="lazy" />
+                <img src="images/generative/Printing/flux2_klein_00038_.png"                                                            alt="Flux Klein"        class="gallery-img lb-trigger" loading="lazy" />
+              </div>
+              <img src="images/generative/Printing/output_1.jpg" alt="Output" class="gallery-img gallery-wide lb-trigger" style="margin-top:2px" loading="lazy" />
+            </div>
+          </div>
+        </article>
+
+        <!-- ══════════════════════════════════════════
+             G03 · SMART GLASSES
+             ══════════════════════════════════════════ -->
+        <article class="project-item" data-index="G03">
+          <div class="project-header" onclick="toggleProject(this)">
+            <div class="project-meta-left">
+              <span class="project-index">[ G03 ]</span>
+              <span class="project-name">SMART GLASSES</span>
+            </div>
+            <div class="project-meta-right">
+              <span class="project-type">AI · WEARABLE · 2026</span>
+              <span class="project-toggle">[ + ]</span>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-description">
+              <div class="desc-row"><span class="desc-key">TYPE</span><span class="desc-dots">.............</span><span class="desc-val">AI GENERATED</span></div>
+              <div class="desc-row"><span class="desc-key">TOOLS</span><span class="desc-dots">.............</span><span class="desc-val">FLUX · NANO BANANA · PYTHON · GRASSHOPPER</span></div>
+            </div>
+            <div class="project-gallery" data-project="G03">
+              <video class="gallery-img gallery-wide" controls muted playsinline style="margin-top:2px">
+                <source src="images/generative/Smart Glasses/roundtable.mp4" type="video/mp4" />
+              </video>
+              <div class="gallery-pair" style="margin-top:2px">
+                <img src="images/generative/Smart Glasses/output_1.jpg"         alt="Flux"  class="gallery-img lb-trigger" loading="lazy" />
+                <img src="images/generative/Smart Glasses/output_2.png"         alt="Flux"        class="gallery-img lb-trigger" loading="lazy" />
+              </div>
+              <img src="images/generative/Smart Glasses/runway2.png"         alt="Nano Banana"  class="gallery-img lb-trigger" loading="lazy" />
+              <img src="images/generative/Smart Glasses/runway3.png"         alt="Nano Banana"  class="gallery-img lb-trigger" loading="lazy" />
+            </div>
+          </div>
+        </article>
+
+      </div><!-- /projects-list -->
+
+      <div class="receipt-divider">- - - - - - - - - - - - - - - - - - - - - - - - - -</div>
+      <div class="projects-footer">
+        <span>TOTAL ITEMS: 03</span>
+        <span class="footer-dots">................................</span>
+        <span>GENERATIVE EXPERIMENTS 2025–2026</span>
+      </div>
+      <div class="receipt-divider">* * * * * * * * * * * * * * * * * * * * * * * * * *</div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section id="contact" class="section">
+    <div class="section-inner">
+      <div class="receipt-label">§ 04 — CONTACT</div>
+      <div class="receipt-divider">- - - - - - - - - - - - - - - - - - - - - - - - - -</div>
+      <div class="contact-block">
+        <p class="contact-line">AVAILABLE FOR INTERNSHIPS,<br>COLLABORATIONS + FREELANCE WORK.</p>
+        <div class="contact-links">
+          <a href="mailto:samkim2724@gmail.com" class="contact-item">
+            <span class="contact-label">EMAIL</span>
+            <span class="contact-dots">.....................</span>
+            <span class="contact-val">SAMKIM2724@GMAIL.COM</span>
+          </a>
+          <a href="mailto:sam_kim@sciarc.edu" class="contact-item">
+            <span class="contact-label">SCHOOL</span>
+            <span class="contact-dots">....................</span>
+            <span class="contact-val">SAM_KIM@SCIARC.EDU</span>
+          </a>
+          <a href="tel:3237081157" class="contact-item">
+            <span class="contact-label">PHONE</span>
+            <span class="contact-dots">....................</span>
+            <span class="contact-val">(323) 708-1157</span>
+          </a>
+          <a href="https://www.linkedin.com/in/sam-kim-b79056204/" target="_blank" rel="noopener" class="contact-item">
+            <span class="contact-label">LINKEDIN</span>
+            <span class="contact-dots">.................</span>
+            <span class="contact-val">SAM KIM →</span>
+          </a>
+          <a href="https://www.instagram.com/lzrd.k/" target="_blank" rel="noopener" class="contact-item">
+            <span class="contact-label">INSTAGRAM</span>
+            <span class="contact-dots">................</span>
+            <span class="contact-val">@LZRD.K →</span>
+          </a>
+        </div>
+      </div>
+      <div class="receipt-divider">- - - - - - - - - - - - - - - - - - - - - - - - - -</div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="receipt-footer">
+    <div class="footer-inner">
+      <div class="receipt-divider">* * * * * * * * * * * * * * * * * * * * * * * * * *</div>
+      <div class="footer-barcode">
+        <div class="barcode-lines" id="barcode"></div>
+        <div class="barcode-num">SCIARC-SAMKIM-2026-ARCH</div>
+      </div>
+      <p class="footer-thanks">THANK YOU FOR VISITING</p>
+      <p class="footer-copy">© <span id="year"></span> SAM EUNTAEK KIM — ALL RIGHTS RESERVED</p>
+      <p class="footer-copy">SOUTHERN CALIFORNIA INSTITUTE OF ARCHITECTURE</p>
+      <div class="receipt-divider">- - - - - - - - - - - - - - - - - - - - - - - - - -</div>
+      <div class="footer-tear"></div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

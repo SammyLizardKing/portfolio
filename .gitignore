@@ -1,0 +1,5 @@
+# PSD source files (too large for GitHub)
+**/*.psd
+
+# Vercel
+.vercel
